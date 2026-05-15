@@ -1,9 +1,9 @@
 """
 Laboratorio 10 - Aprendizaje Semisupervisado.
 
-Entrega reproducible sin dependencias pesadas: usa numpy y librerias estandar
-para descargar el dataset, entrenar modelos, generar visualizaciones SVG y
-crear un reporte PDF.
+Anggelie Veláquez
+Isabella Obando
+Anthony Lou 
 """
 
 from __future__ import annotations

@@ -1,0 +1,21 @@
+Resumen de Laboratorio 10 - Aprendizaje Semisupervisado
+
+Dataset: Wine Quality Red de UCI (https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv)
+Dimensiones: 1599 filas, 12 columnas.
+Variables predictoras: fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol
+Variable objetivo: quality con clases {3: 10, 4: 53, 5: 681, 6: 638, 7: 199, 8: 18}
+Separacion: 1278 entrenamiento, 321 prueba.
+
+Resultados agregados: se reporta el mejor hiperparametro por semilla y luego el promedio entre semillas.
+- Label Propagation con 5% etiquetas: accuracy=0.540, macro-F1=0.277, recall=0.281, std_F1=0.032, mejor configuracion=k=5; alpha=0.85; iter=66
+- Self-Training KNN con 5% etiquetas: accuracy=0.508, macro-F1=0.188, recall=0.214, std_F1=0.054, mejor configuracion=threshold=0.60; pseudo=1149
+- Supervisado KNN con 5% etiquetas: accuracy=0.567, macro-F1=0.271, recall=0.272, std_F1=0.011, mejor configuracion=k=7
+- Label Propagation con 10% etiquetas: accuracy=0.578, macro-F1=0.311, recall=0.309, std_F1=0.016, mejor configuracion=k=5; alpha=0.85; iter=60
+- Self-Training KNN con 10% etiquetas: accuracy=0.567, macro-F1=0.266, recall=0.271, std_F1=0.016, mejor configuracion=threshold=0.60; pseudo=1085
+- Supervisado KNN con 10% etiquetas: accuracy=0.580, macro-F1=0.290, recall=0.289, std_F1=0.006, mejor configuracion=k=7
+- Label Propagation con 20% etiquetas: accuracy=0.587, macro-F1=0.362, recall=0.358, std_F1=0.017, mejor configuracion=k=5; alpha=0.85; iter=47
+- Self-Training KNN con 20% etiquetas: accuracy=0.601, macro-F1=0.299, recall=0.299, std_F1=0.007, mejor configuracion=threshold=0.90; pseudo=241
+- Supervisado KNN con 20% etiquetas: accuracy=0.598, macro-F1=0.287, recall=0.290, std_F1=0.012, mejor configuracion=k=7
+
+Mejor modelo semisupervisado: Label Propagation con 20% etiquetado (macro-F1 promedio=0.362).
+Referencia supervisada con 100% de etiquetas: accuracy=0.667, macro-F1=0.335.
